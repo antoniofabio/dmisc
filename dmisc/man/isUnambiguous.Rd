@@ -1,16 +1,19 @@
 \name{isUnambiguous}
 \alias{isUnambiguous}
+\alias{isAmbiguous}
 \title{Check if a vector is made of unique values only}
 \description{Check if a vector is made of unique values only}
 \usage{
+isAmbiguous(x)
 isUnambiguous(x)
 }
 \arguments{
-  \item{x}{a vector}
+  \item{x}{a vector (usually a character vector)}
 }
 \value{
-  \code{TRUE} if the vector is made of unique values only and contains
-  no missing values, \code{FALSE} otherwise.
+  \code{isUnambiguous} \code{TRUE} if the vector is made of unique values only and contains
+  no missing values, \code{FALSE} otherwise. \code{isAmbiguous} is the
+  exact negation of it.
 }
 \author{
 Antonio, Fabio Di Narzo

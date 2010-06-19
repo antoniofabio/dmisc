@@ -1,3 +1,2 @@
-isUnambiguous <- function(x) {
-  all(!is.na(x)) && (length(unique(x)) == length(x))
-}
+isAmbiguous <- function(x) any(is.na(x)) || length(unique(x)) != length(x)
+isUnambiguous <- function(x) !isAmbiguous(x)
