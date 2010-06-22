@@ -1,4 +1,4 @@
-version 0.2:
+version 0.2: 22/06/2010
 	* add 'filterNames' function
 	* add 'disambiguate' function
 	* add 'isAmbiguous' alternative to 'isUnambiguous'
