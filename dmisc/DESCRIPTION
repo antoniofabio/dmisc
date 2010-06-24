@@ -1,7 +1,7 @@
 Package: dmisc
 Type: Package
 Title: misc utility functions
-Version: 0.2
+Version: 0.3
 Date: 2010-06-22
 Author: Antonio, Fabio Di Narzo
 Maintainer: Antonio, Fabio Di Narzo <antonio.fabio@gmail.com>
