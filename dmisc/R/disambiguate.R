@@ -11,7 +11,7 @@ disambiguate <- function(x, y=seq_along(x), fmt="%s (%s)") {
   y <- as.character(y)
   tbl <- table(x)
   duplId <- which(x %in% names(tbl)[tbl>1])
-  x[duplId] <- sprintf("%s (%s)", x[duplId], y[duplId])
+  x[duplId] <- sprintf(fmt, x[duplId], y[duplId])
   return(x)
 }
 

@@ -1,3 +1,6 @@
+version 0.3:
+	* fix bug in disambiguate: 'fmt' arg was just ignored
+
 version 0.2: 22/06/2010
 	* add 'filterNames' function
 	* add 'disambiguate' function
