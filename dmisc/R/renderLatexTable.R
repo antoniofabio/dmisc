@@ -13,7 +13,7 @@ matrixSplitRows <- function(x, nrows) {
   nblocks <- ceiling(N/nrows)
   ans <- list()
   for(j in seq_len(nblocks)) {
-    ans[[j]] <- x[seq(from=(j-1) * nrows + 1, to=min(N, j*nrows)),]
+    ans[[j]] <- x[seq(from=(j-1) * nrows + 1, to=min(N, j*nrows)),,drop=FALSE]
   }
   return(ans)
 }
