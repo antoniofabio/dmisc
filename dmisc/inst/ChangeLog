@@ -1,4 +1,6 @@
 version 0.3:
+	* add matrixAsTabular & friends utility functions
+	* add `collapse' wrapper to `sep'
 	* add `lincom' linear combinations utility funcs
 	* fix bug in disambiguate: 'fmt' arg was just ignored
 

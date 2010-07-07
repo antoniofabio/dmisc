@@ -1,26 +1,36 @@
-matrixAsTabular <- function(m, align="c") {
-  head <- paste("\\begin{tabular}{",
-                paste(rep(align, NCOL(m)), collapse=""),
-                "}\n", sep="")
-  body <- paste(paste(apply(m, 1, paste, collapse=" & "),
-                      collapse="\\\\\n"), "\\\\\n")
-  tail <- "\\end{tabular}\n"
-  return(paste(head, body, tail, sep=""))
+collapse <- function(x, sep="") paste(x, collapse=sep)
+
+matrixTabularHead <- function(m, align="c") {
+  return(paste("\\begin{tabular}{", collapse(rep(align, NCOL(m))), "}", sep=""))
+}
+matrixTabularTail <- function(m) {
+  return("\\end{tabular}")
+}
+matrixTabularBody <- function(m) {
+  return(paste(apply(m, 1, collapse, sep=" & "), "\\\\"))
 }
 
-matrixSplitRows <- function(x, nrows) {
-  N <- NROW(x)
-  nblocks <- ceiling(N/nrows)
-  ans <- list()
-  for(j in seq_len(nblocks)) {
-    ans[[j]] <- x[seq(from=(j-1) * nrows + 1, to=min(N, j*nrows)),,drop=FALSE]
+matrixAsTabular <- function(m, align="c", head=TRUE) {
+  ans <- matrixTabularBody(m)
+  if(head) {
+    ans <- c(matrixTabularHead(m), ans, matrixTabularTail(m))
   }
   return(ans)
 }
 
-matrixPadd <- function(x, nr, nc, ..., padd="") {
-  padding <- nc*ceiling(length(x) / nc) - length(x)
-  x <- c(x, rep(padd, padding))
+matrixSplitRows <- function(m, nrows) {
+  N <- NROW(m)
+  nblocks <- ceiling(N/nrows)
+  ans <- list()
+  for(j in seq_len(nblocks)) {
+    ans[[j]] <- m[seq(from=(j-1) * nrows + 1, to=min(N, j*nrows)),,drop=FALSE]
+  }
+  return(ans)
+}
+
+matrixPadd <- function(m, nr, nc, ..., padd="") {
+  padding <- nc*ceiling(length(m) / nc) - length(m)
+  x <- c(m, rep(padd, padding))
   matrix(x, nr, nc, ...)
 }
 
