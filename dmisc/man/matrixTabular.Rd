@@ -19,7 +19,7 @@ matrixPadd(m, nr, nc, ..., padd="")
   \item{m}{a matrix}
   \item{align}{latex tabular column alignment specifier}
   \item{head}{should tabular environment \sQuote{head} and \sQuote{tail} be included?}
-  \item{nrow}{number of rows of each submatrix}
+  \item{nrows}{number of rows of each submatrix}
   \item{nr, nc}{num. rows, num. columns}
   \item{...}{extra arguments to \code{\link{matrix}}}
   \item{padd}{padding element}

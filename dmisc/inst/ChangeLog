@@ -1,4 +1,5 @@
 version 0.3:
+	* add `swapNamesAndContents' utility function
 	* add matrixAsTabular & friends utility functions
 	* add `collapse' wrapper to `sep'
 	* add `lincom' linear combinations utility funcs
