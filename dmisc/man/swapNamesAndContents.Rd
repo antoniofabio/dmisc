@@ -1,6 +1,6 @@
 \name{swapNamesAndContents}
 \alias{swapNamesAndContents}
-\title{swap \sQuote{names} and \sQuote{contents} of a vector}
+\title{swap names and contents of a vector}
 \description{swap \sQuote{names} and \sQuote{contents} of a vector}
 \usage{
 swapNamesAndContents(x)

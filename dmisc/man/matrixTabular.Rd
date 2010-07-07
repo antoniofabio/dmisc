@@ -31,7 +31,7 @@ matrixPadd(m, nr, nc, ..., padd="")
 Antonio, Fabio Di Narzo
 }
 \examples{
-TODO
+#TODO
 }
 \keyword{ programming }
 \keyword{ utilities }
