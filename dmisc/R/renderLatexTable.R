@@ -18,7 +18,9 @@ matrixAsTabular <- function(m, align="c", head=TRUE) {
   return(ans)
 }
 
-matrixSplitRows <- function(m, nrows) {
+matrixSplitRows <- function(m, nrows=NULL) {
+  if(is.null(nrows))
+    return(list(m))
   N <- NROW(m)
   nblocks <- ceiling(N/nrows)
   ans <- list()
@@ -41,8 +43,6 @@ colorLatexTable <- function(x, colors, nc, rowsPerPage=NULL, align="c") {
   coloredX[colorI] <- sprintf("\\cellcolor{%s} %s",
                               colors[colorI], x[colorI])
   m <- matrixPadd(coloredX, nc=nc, byrow=TRUE)
-  if(is.null(rowsPerPage))
-    rowsPerPage <- ceiling(length(coloredX) / nc) + 1
   return(paste(sapply(matrixSplitRows(m, rowsPerPage),
                       matrixAsTabular, align=align),
                collapse="\n"))

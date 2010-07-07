@@ -12,7 +12,7 @@ matrixTabularHead(m, align="c")
 matrixTabularTail(m)
 matrixTabularBody(m)
 matrixAsTabular(m, align="c", head=TRUE)
-matrixSplitRows(m, nrows)
+matrixSplitRows(m, nrows=NULL)
 matrixPadd(m, nr, nc, ..., padd="")
 }
 \arguments{
