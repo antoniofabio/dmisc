@@ -1,8 +1,9 @@
 version 0.3:
-	* add `swapNamesAndContents' utility function
+	* add 'fancyContrasts' utility function
+	* add 'swapNamesAndContents' utility function
 	* add matrixAsTabular & friends utility functions
-	* add `collapse' wrapper to `sep'
-	* add `lincom' linear combinations utility funcs
+	* add 'collapse' wrapper to 'sep'
+	* add 'lincom' linear combinations utility funcs
 	* fix bug in disambiguate: 'fmt' arg was just ignored
 
 version 0.2: 22/06/2010
