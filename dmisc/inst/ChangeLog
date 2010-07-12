@@ -1,4 +1,4 @@
-version 0.3:
+version 0.3: 12/07/2010
 	* add 'fancyContrasts' utility function
 	* add 'swapNamesAndContents' utility function
 	* add matrixAsTabular & friends utility functions
