@@ -13,7 +13,7 @@ matrixTabularBody <- function(m) {
 matrixAsTabular <- function(m, align="c", head=TRUE) {
   ans <- matrixTabularBody(m)
   if(head) {
-    ans <- c(matrixTabularHead(m), ans, matrixTabularTail(m))
+    ans <- c(matrixTabularHead(m, align=align), ans, matrixTabularTail(m))
   }
   return(ans)
 }
@@ -43,7 +43,6 @@ colorLatexTable <- function(x, colors, nc, rowsPerPage=NULL, align="c") {
   coloredX[colorI] <- sprintf("\\cellcolor{%s} %s",
                               colors[colorI], x[colorI])
   m <- matrixPadd(coloredX, nc=nc, byrow=TRUE)
-  return(paste(sapply(matrixSplitRows(m, rowsPerPage),
-                      matrixAsTabular, align=align),
-               collapse="\n"))
+  return(unlist(sapply(matrixSplitRows(m, rowsPerPage),
+                       matrixAsTabular, align=align)))
 }
