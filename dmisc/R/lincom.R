@@ -3,7 +3,7 @@
 lincom <- function(X, weights) {
   if(!is.null(names(weights))) {
     stopifnot(!is.null(colnames(X)))
-    X <- X[,names(weights)]
+    X <- X[, names(weights), drop=FALSE]
   }
   return(rowSums(sweep(X, 2, weights, "*")))
 }
