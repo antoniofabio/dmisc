@@ -1,4 +1,6 @@
-version 0.4:
+version 0.5:
+
+version 0.4: 21/02/2011
 	* improve 'lincom': now accepts weights of length 1
 	* improve 'fancyContrasts': 'base' argument can be a level name
 	* add 'beginsWith' and 'endsWith' string functions
